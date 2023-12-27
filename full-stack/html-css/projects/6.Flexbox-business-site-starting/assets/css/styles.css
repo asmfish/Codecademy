@@ -1,0 +1,224 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 22px;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+header {
+    background-color: #2a2c2e;
+    height: 3rem;
+    width: 100%;
+    position: fixed;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+header .logo img{
+    height: 3rem;
+    width: auto;
+}
+
+header nav {
+    width: 100%;
+    padding: 0;
+    text-align: right;
+    margin-right: 1rem;
+}
+
+header nav ul {
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    padding: 0 .5rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.banner {
+    position: relative;
+    background-image: url('../images/banner6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 3rem;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.banner h1 {
+    color: #1dac12;
+    letter-spacing: .3rem;
+}
+
+.banner .proverb {
+    font-style: italic;
+    color: crimson;
+}
+
+.banner div {
+    padding: .5rem;
+    margin: 0 auto;
+    width: 50%;
+}
+
+/*Portoflio style*/
+.portfolio {
+    margin-top: 3rem;
+    background-color: #3eacb4;
+}
+
+.portfolio .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+.portfolio h2.title {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.portfolio .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    border: 0.08rem solid #e4dcdc;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.portfolio .item h3{
+    background-color: #282c2d;
+}
+
+.portfolio .item p {
+    background-color: #282c2d;
+}
+
+.portfolio .full-stack {
+    background-image: url('../images/full-stack-engineer.jpg');
+    background-size: cover;
+}
+
+.portfolio .data-analysis {
+    background-image: url('../images/data-analysis.jpg');
+    background-size: cover;
+}
+
+.portfolio .cyber-security {
+    background-image: url('../images/cyber-security.jpg');
+    background-size: cover;
+}
+
+.portfolio .it-support {
+    background-image: url('../images/it-support.jpg');
+    background-size: cover;
+}
+
+.portfolio .network-engineer {
+    background-image: url('../images/network-engineer.jpg');
+    background-size: cover;
+}
+
+.portfolio .full-stack:hover, .data-analysis:hover,.cyber-security:hover, .it-support:hover, .network-engineer:hover {
+    opacity: .7;
+}
+
+
+/*team members*/
+
+.team {
+    text-align: center;
+    background-image: url('../images/bg-team.jpg');
+    background-size: cover;
+    border: .1rem solid #d2cbcb
+}
+
+.team .item {
+    width: 300px;
+    height: 500px;
+}
+
+.team .ceo img {
+    width: 200px;
+    height: auto;
+}
+
+.team .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+.team .container .item {
+    border: 2px solid rgb(244, 241, 241);
+    width: 300px;
+    text-align: center;
+    background-color: #b6e9b3;
+}
+
+/*footer*/
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/*Media queries*/
+
+@media only screen and (max-width: 600px) {
+    .banner div {
+        width: 100%;
+    }
+
+    header .logo img{
+        height: 2rem;
+        width: auto;
+    }
+
+    header nav {
+        width: 69%;
+        margin: 0 auto;
+    }
+
+    header nav ul {
+        font-size: 16px;
+    }
+}
+
