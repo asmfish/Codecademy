@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather&family=Roboto&family=Work+Sans:wght@400;500;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+        <h1>CSS Selectors Cheat Sheet</h1>
+    </header>
+   <main>
+    <h2>Basic Selectors</h2>
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>CSS</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Universal Selector</td>
+          <td><span class="syntax">*</span></td>
+          <td>
+            Selects all the elements availabel in the web page, for example
+            <strong>p, h1 - h6, span, div, p</strong>, and etc.
+          </td>
+        </tr>
+        <tr>
+          <td>Element Selector</td>
+          <td><span class="syntax">p</span></td>
+          <td>
+            Selector selects elements based on the tag name. In this case all paragraphs are selected.
+            We can also select other elements (like <strong>div, h1 - h6, span</strong>) similarly.
+          </td>
+        </tr>
+        <tr>
+          <td>ID Selector</td>
+          <td><span class="syntax">#elementid</span></td>
+          <td>Selects a single element based on a unique id assigned to the element.</td>
+        </tr>
+        <tr>
+          <td>Class Selector</td>
+          <td><span class="syntax">.classname</span></td>
+          <td>
+            Selects elements that have the specified class name. Class name is specified 
+            using the <strong>class</strong> attribute.
+        </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Attribute Selector</h2>
+    <table>
+        <thead>
+          <th>Name</th>
+          <th>CSS</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>[attribute] Selector</td>
+            <td><span class="syntax">a[target]</span></td>
+            <td>
+                This selects elements containing the specified attribute, 
+                in this case it selects all <strong>a</strong> tags containing <strong>target</strong> attribute.
+            </td>
+          </tr>
+          <tr>
+            <td>[attribute="value"] Selector</td>
+            <td><span class="syntax">a[target="_blank"]</span></td>
+            <td>
+                This selects elements containing the specified attribute and value, 
+                in this case it selects all <strong>a</strong> tags containing 
+                <strong>target</strong> attribute with value <strong>_blank</strong>.
+            </td>
+          </tr>
+          <tr>
+            <td>[attribute~="value"] Selector</td>
+            <td><span class="syntax">img[alt~="flower"]</span></td>
+            <td>
+                This selects all elements with the specified attribute containing the specified word. 
+                In this case all <strong>img</strong> tags with <strong>alt</strong> attribute containing a word <strong>flower</strong> are selected.
+            </td>
+          </tr>
+          <tr>
+            <td>[attribute^="value"] Selector</td>
+            <td><span class="syntax">[class^="top"]</span></td>
+            <td>
+                This selects all emements with the specified attribute starting with the specified value.
+                In this example, it selects all elements with <strong>class</strong> attribute, which its value starting with <strong>top</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>[attribute$="value"] Selector</td>
+            <td><span class="syntax">[class$="code"]</span></td>
+            <td>
+                This selects all emements with the specified attribute ending with the specified value.
+                In this example, it selects all elements with <strong>class</strong> attribute, which its value ending with <strong>code</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>[attribute*="value"] Selector</td>
+            <td><span class="syntax">img[src*=".jpg"]</span></td>
+            <td>
+                Selects elements whose attribute contains specified value. In this example,
+                all image tags whose <strong>src</strong> attribute containing a value <strong>.jpg</strong> are selected.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    <h2>Pseudo Class Selector</h2>
+    <table>
+        <thead>
+          <th>Name</th>
+          <th>CSS</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Anchor Pseudo-classes</td>
+            <td><span class="syntax">a:link</span></td>
+            <td>
+                This selects all <strong>a</strong> elements which are not visited (not clicked).
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><span class="syntax">a:visited</span></td>
+            <td>
+                This selects all <strong>a</strong> elements which are visited (clicked).
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><span class="syntax">a:hover</span></td>
+            <td>
+                This selects <strong>a</strong> element after the user hovers the mouse over it.
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><span class="syntax">a:active</span></td>
+            <td>
+                Selects <strong>a</strong> element after the user presses the mouse down. Hence we can
+                apply any style at this state.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    <h2>Pseudo Element Selector</h2>
+    <table>
+        <thead>
+          <th>Name</th>
+          <th>CSS</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>::first-line Pseudo-element</td>
+            <td><span class="syntax">p::first-line </span></td>
+            <td>
+                This selects the first line of a given text, in this case the first line of <strong>p</strong>
+                element which we can apply any style to it.
+            </td>
+          </tr>
+          <tr>
+            <td>:first-letter Pseudo-element</td>
+            <td><span class="syntax">p::first-letter</span></td>
+            <td>
+                This selects the first letter of a given text, in this case a <strong>p</strong>
+                elemet. Thisnk about a paragraph whose first letter is very large.
+            </td>
+          </tr>
+          <tr>
+            <td>::before Pseudo-element</td>
+            <td><span class="syntax">h1::before</span></td>
+            <td>
+                This is used to insert some content before the content of an element. In this case it inserts content 
+                before the content of <strong>h1</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>::after Pseudo-element</td>
+            <td><span class="syntax">h1::after</span></td>
+            <td>
+                This is used to insert some content after the content of an element. In this case it inserts content 
+                after the content of <strong>h1</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    <h2>Combinator Selector</h2>
+    <table>
+        <thead>
+          <th>Name</th>
+          <th>CSS</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Descendant selector (space)</td>
+            <td><span class="syntax">div p</span></td>
+            <td>
+                This selects the descendant of a specified element, in this case 
+                all <strong>p</strong> tags with in <strong>div</strong> will be selected.
+            </td>
+          </tr>
+          <tr>
+            <td>Child selector (>)</td>
+            <td><span class="syntax">div > p</span></td>
+            <td>
+                This selects the child of a given element, in this case all <strong>p</strong> elements
+                that are children of <strong>div</strong> will be selected.
+            </td>
+          </tr>
+          <tr>
+            <td>Adjacent sibling selector (+)</td>
+            <td><span class="syntax">div + p</span></td>
+            <td>
+                This selects an element that is directly after another specific element. In this example 
+                it selects the first <strong>p</strong> element that are placed immediately after ><strong>div</strong> elements
+            </td>
+          </tr>
+          <tr>
+            <td>General sibling selector (~)</td>
+            <td><span class="syntax">div ~ p</span></td>
+            <td>
+                This selector selects all elements that are next siblings of a specified element.
+                Here it selects all <strong>p</strong> that are next siblings of <strong>div</strong> elements: 
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   </main>
+
+  </body>
+</html>
