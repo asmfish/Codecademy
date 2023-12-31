@@ -375,14 +375,11 @@ footer .other-info ul li a {
 }
 
 
-/*media screen*/
-@media only screen and (max-width: 480px){
-    .projects .container .item {
+/*small tablet and large mobile*/
+@media only screen and (max-width: 768px){
+    body, nav, main, footer {
         width: 100%;
     }
-}
-
-@media only screen and (max-width: 768px){
 
     footer .other-info {
         text-align: center;
@@ -396,9 +393,6 @@ footer .other-info ul li a {
         display: block;
     }
 
-    body{
-        width: 100%;
-    }
     nav{
         text-align: center;
     }
@@ -428,9 +422,39 @@ footer .other-info ul li a {
     }
 }
 
-@media only screen and (min-width: 768px){
+/*Large tablet*/
+@media screen and (min-width: 768px) and (max-width: 1024px){
     nav ul{
         display: inline-block;
         position: relative;
     }
+
+    body, nav, main, footer {
+        width: 100%;
+    }
+
+    .toggle-menu {
+        display: inline-block;
+    }
+
+    nav ul{
+        display: none;
+        position: absolute;
+        width: 40%;
+        top: 1rem;
+        right: 0;
+        background-color: #c1eac1;
+        padding-bottom: 1.5rem;
+        transition: right linear .2s;
+    }
+
+    nav ul li{
+        display: block;
+        width: 80%;
+        border-radius: 0;
+        margin: .5rem auto;
+        border: none;
+        color: white;
+    }
 }
+
