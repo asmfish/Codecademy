@@ -1,0 +1,50 @@
+/*Check data structure*/
+SELECT *
+FROM startups;
+
+/*Calculate total number of companies*/
+SELECT COUNT(name) AS Total_Companies
+FROM startups;
+
+/*Calculate the total value of companies*/
+SELECT SUM(valuation) AS Total_Value
+FROM startups;
+
+/*Select the highest amount raised by a strtup*/
+SELECT MAX(raised) AS Max_Raised
+FROM startups;
+
+/*Maximum amount of money raised, during ‘Seed’ stage*/
+SELECT MAX(raised) AS Max_Raised
+FROM startups
+WHERE stage = 'seed';
+
+/*Find the year of the oldest company*/
+SELECT MIN(founded)
+FROM startups;
+
+/*Return the average valuation*/
+SELECT AVG(valuation) AS Avg_Valuation
+FROM startups;
+
+/*Select the average valuation, in each category.*/
+/*Round the averages to two decimal places.*/
+/*Order the list from highest averages to lowest.*/
+SELECT category, ROUND(AVG(valuation), 2) AS Avg_Valuation
+FROM startups
+GROUP BY category
+ORDER BY 2 DESC;
+
+/*Select total number of companies per category*/
+/*Filter the result to only include categories that have more than three companies in them*/
+SELECT category, COUNT(*) AS Total_Companies
+FROM startups
+GROUP BY category
+HAVING COUNT(*) > 3;
+
+/*Return average size of a startup in each location.*/
+/*With average sizes above 500*/
+SELECT location, AVG(employees)
+FROM startups
+GROUP BY location
+HAVING AVG(employees) > 500;

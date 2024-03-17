@@ -1,0 +1,50 @@
+/*1. Check data*/
+SELECT * FROM trips;
+
+SELECT * FROM riders;
+
+SELECT * FROM cars;
+
+/*2. Identify primary keys*/
+/*The primary key of trips is id.
+The primary key of riders is id.
+The primary key of cars is id.*/
+
+/*3. Cross join riders and cars*/
+SELECT * 
+FROM riders
+CROSS JOIN cars;
+
+/*4. create a Trip Log with the trips and its users.*/
+SELECT *
+FROM trips
+LEFT JOIN riders
+ON trips.rider_id = riders.id;
+
+/*5. create a link between the trips and the cars used during those trips.*/
+SELECT *
+FROM trips
+INNER JOIN cars
+ON trips.car_id = cars.id;
+
+/*6. What is the average cost for a trip?*/
+SELECT AVG(cost) AS Avg_Trip_Cost
+FROM trips;
+
+/*7. Lyft is looking to do an email campaign for all the irregular users.
+Find all the riders who have used Lyft less than 500 times!*/
+SELECT *
+FROM riders
+WHERE total_trips < 500;
+
+/*8. Calculate the number of cars that are active.*/
+SELECT COUNT(*) AS Total_Active_Cars
+FROM cars
+WHERE status = 'active';
+
+/*9. It’s safety recall time for cars that have been on the road for a while.
+Write a query that finds the two cars that have the highest trips_completed.*/
+SELECT *
+FROM riders
+ORDER BY total_trips DESC
+LIMIT 2;
