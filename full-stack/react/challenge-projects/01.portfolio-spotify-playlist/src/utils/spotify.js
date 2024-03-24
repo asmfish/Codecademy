@@ -1,6 +1,5 @@
 const Spotify = {
     CLIENT_ID: '',
-    CLIENT_SECRET: '',
     userID: null,
     accessToken: '',
  
