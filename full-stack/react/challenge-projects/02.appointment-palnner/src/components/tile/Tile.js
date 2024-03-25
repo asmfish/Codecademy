@@ -12,7 +12,12 @@ export const Tile = ({name, description}, key) => {
   return (
     <div className="tile-container" key={key}>
       <p className="tile-title">{name}</p>
-      <p>{JSON.stringify(description)}</p>
+      {
+        Object.entries(description).map(([key,val], idx) => (
+          <p className="tile" key={idx}>{`${key} : ${val}`}</p>
+        ))
+      }
+      <hr/>
     </div>
   );
 };

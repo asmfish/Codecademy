@@ -31,7 +31,7 @@ export const ContactForm = ({
         <input type="text" name="phone" id="phone" value={formData.phone} onChange={handleChange} pattern="[0-9]{11}"/> <br/>
 
         <label htmlFor="email">Email:</label>
-        <input type="text" name="email" id="email" value={formData.email} onChange={handleChange} /> <br/>
+        <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} /> <br/>
 
         <input type="submit" value="Add Contact" /> 
       </form>
