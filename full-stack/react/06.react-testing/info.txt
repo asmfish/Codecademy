@@ -1,0 +1,48 @@
+To begin testing, we need to make sure that our test files are located, 
+or match the following name conventions under the /src top-level directory:
+
+files with names ending in .test.js
+files with names ending in .spec.js
+.js files within a __tests__/ directory
+
+npm test -- --coverage
+
+Make sure to note the double dash between the npm test and --coverage. 
+This is to separate the arguments from the test command itself. 
+This --coverage flag allows us to get a report of which lines of our code were actually tested. 
+In addition to being outputted in the terminal, this report becomes available in a directory 
+named coverage/ that is created at runtime.
+
+This report can help us ensure our code has been thoroughly tested. From the report, we can see that there are four categories of our code that are being analyzed:
+
+Statement coverage analyzes the percentage of the program’s statements that have been executed.
+Branch coverage analyzes the percentage of the program’s edge cases that have been executed.
+Function coverage analyzes the percent of the program’s functions that have been called during testing.
+Line coverage analyzes the percentage of the program’s executable lines in the source file that have been executed.
+
+npm test -- --silent
+npm test -- --coverage
+npm test -- --help
+
+it("should render onto the screen") () => {});
+test("should render onto the screen") () => {});
+The it() function takes three arguments:
+
+A string describing what is being tested.
+A callback function containing assertions and other testing logic.
+An optional timeout in milliseconds that specifies how long a test 
+should wait before automatically aborting. If unspecified, this defaults to 5000 ms.
+
+assertions
+Note: The expect(actual).toBe(expected) matcher is used to compare simple data types for equality, 
+while the expect(actual).toEqual(expected) matcher is used for deep equality comparisons.
+
+Jest documentation: https://jestjs.io/docs/expect
+Let’s go over the matchers used in this example:
+
+.toBeDefined() is used to verify that a variable is not undefined. This is often the first thing checked.
+.toEqual() is used to perform deep equality checks between objects.
+.toBe() is similar to .toEqual() but is used to compare primitive values.
+.toBeTruthy() is used to verify whether a value is truthy or not.
+.not is used before another matcher to verify that the opposite result is true
+.toContain() is used when we want to verify that an item is in an array. In this case, since the .not matcher is used, we are verifying that "Ice Cream" is NOT in the array.
