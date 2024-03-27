@@ -1,0 +1,33 @@
+#In this project, you’ll have to resolve merge conflicts in two markdown files. Markdown is a file format that converts easily into HTML.
+
+1. You are currently in master
+git bracnh
+edits
+*master
+
+2. Merge edits to master, which will result in two merge conflicts README.md and examples.md.
+git merge edits
+
+3. Open the README.md and examples.md and identify the merge conflicts
+
+4. In README.md keep the chnages from edits and delete changes from head
+<<<<<<< HEAD
+This repository is a compilation of some of my favorite speeches and quotes from renowned technology advocates and contributors.
+
+They are contained in the examples.md file.
+=======
+This repository is a compilation of speeches and quotes from renowned technology advocates and contributors including Jhon, Kate.
+>>>>>>> edits
+
+5. Add the file to staging area
+This repository is a compilation of speeches and quotes from renowned technology advocates and contributors including Jhon, Kate.
+git add README.md
+
+6. Do steps 4 and 5 for examples.md and add it to staging area
+git add examples.md
+
+7. Commit
+git commit -m "Resolve merge conflict"
+
+8. Delete edits bracnh
+git bracnh -d edits

@@ -1,0 +1,47 @@
+#To develop a new bithday party page (index.html)
+1. List all branches
+git branch
+* master
+moma
+whitney
+
+2. Delete branches other than master
+git delete -D moma #-D if branch never merged to master but contains new commits
+git delete -D whiney
+
+3. The page should contain information using unoirdered list insted of paragraphs so create a new branch and switch to it
+git branch unordered-list
+git checkout unordered-list
+
+4. Update index.html using lists
+
+5. Add index.html to staging area
+git add index.html
+
+6. Commit the chnages
+git commit -m "updated info with list"
+
+7. Now the chnages has been approved by John and it it time to merge to master
+git checkout master
+git merge unordered-list
+
+8. John wants the heading to be bigger so create another bracnh to impliment this and switch to it
+git branch big-heading
+git checkout big-heading
+
+9. Update index.html to have <h1> as heading
+
+10. Add index.html to staging area
+git add index.html
+
+11. Commit chnages
+git commit -m "updated heading"
+
+12. John approves the changes so merge them to master
+git checkout master
+git merge big-heading
+
+
+
+
+
