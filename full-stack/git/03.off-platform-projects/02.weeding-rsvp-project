@@ -1,0 +1,25 @@
+In this project, you will practice forking a public repository and making a pull request to the original repository.
+
+Elizabeth and Phillip are having a wedding and they are having guests update the guest lists themselves. 
+To RSVP, you will fork their repository and create a pull request. 
+Follow instructions at https://github.com/Codecademy/wedding-rsvp-off-platform-project
+
+1. Fork the repository
+
+2. Clone it to your local computer
+
+3. Chnage to the directory and create a new branch in the format rsvp-[yourname]
+> cd wedding-rsvp-off-platform-project
+> git branch rsvp-asmerom
+> git checkout rsvp-asmerom
+
+4. Modify the guests.md file and add new row with your name and number of guests that will come with you, and save.
+
+5. Commit your changes
+> git add guests.md
+> git commit -m "Added my name to the list of guests."
+
+6. Push your chnages to the forked repository
+> git push --set-upstream origin rsvp-asmerom
+
+7. Go to the github main repository page and create a pull request from your branch rsvp-asmerom to the main branch.

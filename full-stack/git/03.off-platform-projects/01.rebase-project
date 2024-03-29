@@ -1,0 +1,59 @@
+As a refresher, the Git rebase functionality helps branches keep up to date 
+with the most recent changes in the main branch. We get a more linear history
+in the repository after rebasing. In this project, you will help two friends 
+with their project of transcribing a story onto a GitHub repository.
+
+# Task Viraj and Noah work together to transcribe childrens story and store it in github repository.
+# Viraj working on Part 1 and Noah on Part 2
+# They decided to work on d/t branches to avoid conflicts
+# Viraj works on branch part_1_monday
+# Noah works on branch part_2_monday
+# The main branch contains the most recent and approved merge work
+
+1. Viraj and Noah worked on monday and commited to their respective branches
+
+2. Noah ends the day by creatign a pull request and merging to the main barnch
+
+3. Now main and part_2_monday branches track the same progress
+
+4. However, Viraj's branch part_1_monday stays behind from the recent changes in the main branch
+
+5. So we need to help Virajs branch uptodate using rebase
+
+6. We could do pull origin main and merge the changes if he do not care about maintaining intrim commits, so it is 
+better to use rebase to mainitain the commits.
+
+7. Fork https://github.com/Codecademy/practice-rebase-off-platform-project and then clone it to your local repository.
+
+8. git clone htps://github.com/asmfish/practice-rebase-off-platform-project.git
+
+9. Chnage to the folder and make sure the branches exist
+> git branch -a
+remotes/origin/HEAD -> origin/main
+remotes/origin/main
+remotes/origin/part_1_Monday
+remotes/origin/part_2_Monday
+
+10. Execute the following command to see the status of the branches, and the state will be already upto date.
+> git checkout part_1_Monday
+> git pull
+> git checkout part_2_Monday
+> git pull
+
+11. Check full picture of commits and progresses
+> git checkout main
+> git log --graph --decorate --oneline --all
+the result will be main part_2_monday has the same progress, where us part_1_Monday
+is stays behind, so we need to apply rebase.
+
+12. Chenge to Viraj's branch part_1_Monday then rebase
+> git checkout part_1_Monday
+> git rebase main
+
+13. Observe the new state of the branches
+> git checkout main
+> git log --graph --decorate --oneline --all
+
+14. Notice that the The Little Black Fish - Part 2 file in Viraj’s branch is updated with Noah’s changes.
+
+

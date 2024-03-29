@@ -1,0 +1,37 @@
+# In this project, you’ll be playing the role of two collaborators working on a recipe book.
+remote - veggie-favorites
+clone - veggie-clone
+
+1. Go to the remote veggie-favorites using cd
+cd veggie-favorites
+
+2. Make chnages to file chilli.txt or any file, stage and commit
+git add chilli.txt
+git commit -m "updated chilli.txt"
+
+3. Go to your clone with cd
+cd ../veggie-clone
+
+4. Fetch all new work from remote
+git fetch
+
+5. Merge origin/master to local master
+git merge origin/master
+
+6. Create new branch to work on new-recipe and switch to it
+git branch new-recipe
+git checkout new-recipe
+
+7. Work on new-recipe.txt and stage and commit
+git add new-recipe.txt
+git commit -m "new recipe"
+
+8. Fetch one more time to avoid merge conflicts
+git fetch
+
+9. Push your branch to remote
+git push origin new-recipe
+
+10. Navigate back to the remote veggie-favorites and confirm the prsesence of new branch
+cd ../veggie-favorites
+git branch

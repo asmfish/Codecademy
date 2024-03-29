@@ -1,0 +1,20 @@
+# In this project, we’ll be using Git to write comments on your student’s JavaScript homework(homework.js).
+1. There is a remote called maryrose-hw, which contains student's JavaScript homework. Clone this remote.
+git clone maryrose-hw stud-hw
+
+2. change to the cloned repo
+cd stud-hw
+
+3. Create a new bracnh where you will comment on java script home work.
+git branch comment-hw
+git checkout comment-hw
+
+4. Open homework.js and start commenting using // 
+//comment
+
+5. Add homework.js to staging area and commit
+git add homework.js
+git commit -m "commented on hw"
+
+6. Push the branch(comment-hw) to the remote(maryrose-hw)
+git push origin comment-hw
