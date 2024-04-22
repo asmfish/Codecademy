@@ -1,0 +1,29 @@
+User and Role Management
+Your next task is to redesign the databases’ role system. As it’s grown over the years, Carcademy’s employees haven’t maintained it properly, resulting in a complex web of permissions and overrides that is difficult to navigate. This complex web makes it easy to introduce vulnerabilities by mistake.
+
+To solve this, you decide to create a system that uses three types of roles: permissions, groups, and users.
+
+Permissions will determine privileges based on tasks, such as reading and writing to a given table.
+Groups will be collections of permissions, and represent a group of users.
+Users represent specific people or applications, and join groups based on what their job is.
+
+1. Create a new permission role
+   CREATE ROLE p_customers_read;
+
+2. Give permission to p_customers_read
+   GRANT SELECT ON customers TO p_customers_read;
+
+3. Create role that will serve as group for employees
+   CREATE ROLE g_employees;
+
+4. Give read permission to employee group
+   GRANT p_customers_read TO g_employees;
+
+5. To test the above permission, create a new user account called u_example
+   CREATE ROLE u_example WITH LOGIN;
+
+6. Now add u_example to g_employees
+   GRANT g_employees TO u_example;
+
+7. Finally impliment default-deny behaviour, revoke public permissions so that users require the p_customers_read to read customers table
+   REVOKE SELECT ON customers FROM PUBLIC;

@@ -1,0 +1,18 @@
+Host-Based Authentication
+Your first stop is pg_hba.conf, a file that configures host-based authentication in Postgres. The pg_hba.conf file allows you to specify rules for how Postgres should handle different connections. Rules can apply narrowly or broadly, depending on how precise the parameters are.
+
+In the pg_hba.conf file, all the entries follow the same basic format, with blank lines or lines beginning with a # symbol being ignored. The basic format of entries is:
+
+connection_type  db  user  address  auth_method  [auth_options]
+connection_type  db  user  address  auth_method  [auth_options]
+
+1. connection_type - matches external conections using ssl or not
+2. db - the database to be authenticated and authorized, all - refers to all db_customers
+3. user - the user to whom to grant permission, or user who belongs to a group +g_employees for example
+4. address - from which connections are allowed, samenet - allows connects from same network as postgres server.
+5. auth_method - specifies the method of authentication, for example sha-256, this option could also be reject.
+
+host db_customers +g_employees samenet scram-sha-256
+host db_employees +g_hr samenet scram-sha-256
+hostssl all u_owner 104.20.25.250 scram-sha-256
+host all all all reject

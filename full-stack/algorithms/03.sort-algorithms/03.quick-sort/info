@@ -1,0 +1,7 @@
+Quicksort is an unusual algorithm in that the worst case runtime is O(N^2), but the average case is O(N * logN).
+
+When the array passed in as an argument is no larger than one element.
+
+👏
+Correct! A single element array is sorted. These elements are then either recombined, or if the sort was “in-place”, they’ve already been swapped into the correct location.
+Correct! If the first element is always chosen as the pivot and the data-set is sorted, this would result in a O(n^2) runtime because the partition step only reduces the problem by a single element.

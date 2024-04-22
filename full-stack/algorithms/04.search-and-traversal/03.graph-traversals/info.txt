@@ -1,0 +1,5 @@
+So how do you calculate the runtime for graph search algorithms?
+
+In an upper bound scenario, we would be looking at every vertex and every edge. 
+Because of this, the big O runtime for both depth-first search and breadth-first 
+search is O(vertices + edges).

@@ -1,6 +1,5 @@
 {
-  "type": "module",
-  "name": "01.rooster-regulation",
+  "name": "01.bubble-sort",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^10.2.0"
+    "chai": "^5.1.0",
+    "mocha": "^10.4.0"
   }
 }

@@ -1,0 +1,17 @@
+Server Configuration
+Slowly, you’re fixing Carcademy’s broken authentication and access control. Your last stop is a configuration file called postgresql.conf, in order to make some final tweaks to improve the overall security of the Postgres server. Some of the changes will enforce secure authentication, while others will make it more difficult for an attacker to target the server using automated tools.
+
+Automated tools are widely used by hackers to scan targets and determine what software they are running. Scanning too much or too quickly greatly increases the risk of detection, so the tools are often configured to scan specific ports that are widely used, such as 21, 22, 80, etc…
+
+# some_other_configuration = some_values
+listen_addresses = 'localhost'
+port = 54831
+ssl = on
+listen_addresses = 'localhost, 104.20.25.250'
+
+
+You’ve:
+
+Set up host-based authentication to define who is allowed to connect to the server.
+Implemented a role management system that operates on the Principle of Least Privilege.
+Enforced secure authentication and dissuaded automated attacks.

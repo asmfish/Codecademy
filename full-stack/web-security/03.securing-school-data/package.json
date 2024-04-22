@@ -1,15 +1,15 @@
 {
   "type": "module",
-  "name": "01.rooster-regulation",
+  "name": "03.securing-school-data",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "mocha": "^10.2.0"
+  "dependencies": {
+    "dotenv": "^16.4.5"
   }
 }

@@ -1,0 +1,9 @@
+# Prevent Uploading Sensitive Information
+
+# config files
+.env
+pg_hba.conf
+postgresql.conf
+
+# dependencies
+node_modules/
